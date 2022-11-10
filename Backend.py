@@ -1,0 +1,1 @@
+#W tym pliku znajduje się nasza implementacja algorytmu FLCS wraz z potrzebymi funkcjami

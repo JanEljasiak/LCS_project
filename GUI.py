@@ -1,0 +1,1 @@
+#W tym pliku znajduje się GUI służące do wprowadzania danych przez użytkownika oraz do prezentacji wyników

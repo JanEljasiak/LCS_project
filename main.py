@@ -13,5 +13,6 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print('Karol tu był')
+    print('Karol tu był drugi raz')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
