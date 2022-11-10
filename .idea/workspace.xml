@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="cos">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +12,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2GZii1ypsXuOFCcJOUae4K73QDd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -20,6 +23,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
@@ -31,9 +35,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\User\AppData\Local\Programs\Python\Python310\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -75,67 +79,20 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cos" />
     <option name="LAST_COMMIT_MESSAGE" value="cos" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1666603273372">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1666603273372" />
-    <state x="784" y="422" key="Github.CreateGistDialog" timestamp="1666603466293">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="784" y="422" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1666603466293" />
-    <state x="834" y="418" key="Github.ShareDialog" timestamp="1666603298332">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="834" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1666603298332" />
-    <state x="764" y="225" key="Github.UntrackedFilesDialog" timestamp="1666603360407">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="764" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1666603360407" />
-    <state width="1362" height="266" key="GridCell.Tab.0.bottom" timestamp="1666602699991">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1666602699991" />
-    <state width="1362" height="266" key="GridCell.Tab.0.center" timestamp="1666602699991">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1666602699991" />
-    <state width="1362" height="266" key="GridCell.Tab.0.left" timestamp="1666602699991">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1666602699991" />
-    <state width="1362" height="266" key="GridCell.Tab.0.right" timestamp="1666602699991">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1362" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1666602699991" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1666603216518">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1666603216518" />
-    <state x="644" y="253" key="Vcs.Push.Dialog.v2" timestamp="1666604522619">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="644" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1666604522619" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1666603441976">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1666603441976" />
-    <state x="0" y="39" width="929" height="685" key="dock-window-1" timestamp="1666603525422">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="39" width="929" height="685" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1666603525422" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1666602760367">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1666602760367" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1666603179140">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1666603179140" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
