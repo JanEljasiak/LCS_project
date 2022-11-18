@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="Próba">
-      <change beforePath="$PROJECT_DIR$/.idea/LCS_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LCS_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="implementacja podstawowego algorytmu LCS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.LCS">
+  <component name="RunManager" selected="Python.Backend">
     <configuration name="Backend" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +70,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="LCS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LCS" type="PythonConfigurationType" factoryName="Python">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,7 +114,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.LCS" />
         <item itemvalue="Python.Backend" />
       </list>
     </recent_temporary>
@@ -154,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668113574250</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implementacja podstawowego algorytmu LCS">
+      <created>1668274330916</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668274330916</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add build_successor_tables function">
+      <created>1668786683404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668786683404</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -183,6 +194,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cos" />
     <MESSAGE value="Próba" />
-    <option name="LAST_COMMIT_MESSAGE" value="Próba" />
+    <MESSAGE value="implementacja podstawowego algorytmu LCS" />
+    <MESSAGE value="Add build_successor_tables function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add build_successor_tables function" />
   </component>
 </project>
