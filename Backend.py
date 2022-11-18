@@ -1,25 +1,17 @@
 # W tym pliku znajduje się nasza implementacja algorytmu FLCS wraz z potrzebymi funkcjami
 
-def funkcja():
-    Chcesz_sie_bawic = True
-    while Chcesz_sie_bawic:
-
-        licznik = int(input("Podaj liczbę od 1 do 5 (poza 4)"))
-        if licznik not in [1, 2, 3, 5]:
-            print("Bardzo nieładne zachowanie ;/ ")
-            Chcesz_sie_bawic = False
-        if licznik == 1:
-            print("Janek pozdrawia prowadzacego!")
-        if licznik == 2:
-            print("Damian pozdrawia prowadzacego!")
-        if licznik == 3:
-            print("Karol pozdrawia prowadzacego!")
-        if licznik == 5:
-            print("Wszyscy pozdrawiamy prowadzacego!")
-        Chcesz_sie_bawic = bool(input("Czy dalej chcesz sie bawić? (Tak- wpisz cokolwiek/dosyć tego- zostaw puste pole)"))
-        print("Miłego dnia")
-
-
-funkcja()
-
-
+def build_successor_tables(seqA, seqB):
+    seqAWithSpace = " " + seqA
+    n1 = len(seqAWithSpace)
+    seqBWithSpace = " " + seqB
+    n2 = len(seqBWithSpace)
+    distinctLetters = "".join(dict.fromkeys(seqA + seqB))
+    m = len(distinctLetters)
+    TseqA = [[-1 for col in range(n1)] for row in range(m)]
+    TseqB = [[-1 for col in range(n2)] for row in range(m)]
+    for i in range(m):
+        for j in range(n1):
+            TseqA[i][j] = seqAWithSpace.find(distinctLetters[i], j+1)
+        for j in range(n2):
+            TseqB[i][j] = seqBWithSpace.find(distinctLetters[i], j+1)
+    return [TseqA, TseqB]
