@@ -15,3 +15,10 @@ def build_successor_tables(seqA, seqB):
         for j in range(n2):
             TseqB[i][j] = seqBWithSpace.find(distinctLetters[i], j+1)
     return [TseqA, TseqB]
+
+def pairs(TseqA, TseqB):
+    n = len(TseqA)
+    pairs_table = [None]*n
+    for i in range(n):
+        pairs_table[i] = [i, TseqA[i][0], TseqB[i][0], 0, 1]
+    return pairs_table
