@@ -49,3 +49,8 @@ def find_list_of_LCS(pairsTable, seqA):
             LCS = seqAWithSpace[tempPair[1]] + LCS
         listOfLCS[i] = LCS
     return listOfLCS
+
+def LCS(seqA, seqB):
+    matricesWithRowDim = build_successor_tables(seqA, seqB)
+    pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
+    return find_list_of_LCS(pairsTable, seqA)
