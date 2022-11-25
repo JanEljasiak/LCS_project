@@ -9,4 +9,3 @@ layout = [
 
 window = sg.Window("123", layout)
 
-while True:
