@@ -2,15 +2,15 @@
 
 def build_successor_tables(seqA, seqB):
     seqAWithSpace, seqBWithSpace = " " + seqA, " " + seqB
-    colDim1, colDim2 = len(seqAWithSpace), len(seqBWithSpace)
+    colDimA, colDimB = len(seqAWithSpace), len(seqBWithSpace)
     distinctLetters = "".join(dict.fromkeys(seqA + seqB))
     rowDim = len(distinctLetters)
-    TseqA = [[-1 for col in range(colDim1)] for row in range(rowDim)]
-    TseqB = [[-1 for col in range(colDim2)] for row in range(rowDim)]
+    TseqA = [[-1 for col in range(colDimA)] for row in range(rowDim)]
+    TseqB = [[-1 for col in range(colDimB)] for row in range(rowDim)]
     for i in range(rowDim):
-        for j in range(colDim1):
+        for j in range(colDimA):
             TseqA[i][j] = seqAWithSpace.find(distinctLetters[i], j+1)
-        for j in range(colDim2):
+        for j in range(colDimB):
             TseqB[i][j] = seqBWithSpace.find(distinctLetters[i], j+1)
     return TseqA, TseqB, rowDim
 
@@ -35,22 +35,17 @@ def pairs_complete(matricesWithRowDim, pairsTable):
             pairsTable[pairsTable.index(identicalPair)][5] = 0
     return pairsTable
 
-def function(pairsTable, seqA):
+def find_list_of_LCS(pairsTable, seqA):
     seqAWithSpace = " " + seqA
-    maximalLevel = max(x[0] for x in pairsTable)
-    identicalPairsWithMaximalLevel = filter(lambda x: x[3] == maximalLevel, pairsTable)
+    maximalLevel = max(x[3] for x in pairsTable)
+    identicalPairsWithMaximalLevel = list(filter(lambda x: x[3] == maximalLevel, pairsTable))
     numberOfLCS = len(identicalPairsWithMaximalLevel)
-    LCS = [None] * numberOfLCS
-    for identicalPair in identicalPairsWithMaximalLevel:
-        i = 0
+    listOfLCS = [None] * numberOfLCS
+    for i, identicalPair in enumerate(identicalPairsWithMaximalLevel):
         tempPair = identicalPair
-        LCSs = seqAWithSpace[tempPair[1]]
-        for j in range(maximalLevel-1):
-            tempPair = filter(lambda x: x[0] == tempPair[4], pairsTable)
-            LCSs = seqAWithSpace[tempPair[1]] + LCSs
-        LCS[i] = LCSs
-        i += 1
-    return LCS
-
-a = build_successor_tables("CAGTT", "AGTAC")
-print(function(pairs_complete(a, pairs(a)), "CAGTT"))
+        LCS = seqAWithSpace[tempPair[1]]
+        for j in range(maximalLevel):
+            tempPair = list(filter(lambda x: x[0] == tempPair[4], pairsTable))[0]
+            LCS = seqAWithSpace[tempPair[1]] + LCS
+        listOfLCS[i] = LCS
+    return listOfLCS
