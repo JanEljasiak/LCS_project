@@ -1,4 +1,15 @@
 import PySimpleGUI as sg  # pip install pysimplegui
+from pathlib import Path
+
+def is_valid_path(filepath):
+    if filepath and Path(filepath).exists():
+        return True
+    sg.popup_error("Filepath is not correct")
+    return False
+
+
+
+
 
 
 layout = [
@@ -15,7 +26,8 @@ while True:
     if event in (sg.WINDOW_CLOSED, "Exit"):
         break
     if event == "Check degree of kinship":
-        sg.popup_error("Not yet implemented")
+        if is_valid_path(values["-IN-"]) and is_valid_path(values["-OUT-"]):
+            sg.popup_error("Not yet implemented")
 window.close()
 """
 
