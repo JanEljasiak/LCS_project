@@ -54,3 +54,5 @@ def LCS(seqA, seqB):
     matricesWithRowDim = build_successor_tables(seqA, seqB)
     pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
     return find_list_of_LCS(pairsTable, seqA)
+
+print(LCS("AGCA","AGAAG"))
