@@ -23,10 +23,11 @@ def build_successor_tables(seqA, seqB):
 
 def pairs(matricesWithRowDim):
     TseqA, TseqB, rowDim = matricesWithRowDim
-    pairsTable = [None]*rowDim
+    pairsTable = list()
     for i in range(rowDim):
-        pairsTable[i] = [i, TseqA[i][0], TseqB[i][0], 0, -1, 1]
-                            # (k,i,j,level,pre,active)
+        if TseqA[i][0] != -1 and TseqB[i][0] != - 1:
+            pairsTable.append([i, TseqA[i][0], TseqB[i][0], 0, -1, 1])
+                                # (k,i,j,level,pre,active)
     return pairsTable
 
 def pairs_complete(matricesWithRowDim, pairsTable):
