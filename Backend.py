@@ -1,5 +1,12 @@
 # W tym pliku znajduje się nasza implementacja algorytmu FLCS wraz z potrzebnymi funkcjami
 
+def validate(seq):
+    for letter in seq:
+        if letter not in ["A", "C", "G", "T"]:
+            raise ValueError("Sekwencje muszą być ciągiem liter należących do ustalonego alfabetu.")
+    if not seq:
+        raise ValueError("Żadna z podanych sekwencji nie może być pusta.")
+
 def build_successor_tables(seqA, seqB):
     seqAWithSpace, seqBWithSpace = " " + seqA, " " + seqB
     colDimA, colDimB = len(seqAWithSpace), len(seqBWithSpace)
@@ -51,8 +58,8 @@ def find_list_of_LCS(pairsTable, seqA):
     return listOfLCS
 
 def LCS(seqA, seqB):
+    validate(seqA)
+    validate(seqB)
     matricesWithRowDim = build_successor_tables(seqA, seqB)
     pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
     return find_list_of_LCS(pairsTable, seqA)
-
-print(LCS("AGCA","AGAAG"))
