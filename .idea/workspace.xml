@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="Add Unit tests for pair_complete function">
+    <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="Change file's name">
+      <change afterPath="$PROJECT_DIR$/Unit_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit tests.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Unit Test" />
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
@@ -47,7 +47,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Development" />
+        <entry key="$PROJECT_DIR$" value="GUI-develpment" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,11 +61,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/karol/PycharmProjects/LCS_project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/karol/PycharmProjects/LCS_project&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python tests.Python tests in Unit_tests.py">
     <configuration name="Backend" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LCS_project" />
@@ -109,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Unit tests.MyTestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Unit_tests.MyTestCase.test_LCS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,11 +119,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Unit tests.MyTestCase&quot;" />
+      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_LCS&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in Unit tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Unit_tests.MyTestCase.test_LCS4" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,8 +133,22 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Unit tests.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_LCS4&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Unit_tests.MyTestCase.test_pairs_complete" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="LCS_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_pairs_complete&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in Unit_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -151,35 +165,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unit tests" type="tests" factoryName="Autodetect" temporary="true">
-      <module name="LCS_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\karol\PycharmProjects\LCS_project\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Unit tests&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.GUI" />
       <item itemvalue="Python.Backend" />
+      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS" />
+      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS4" />
+      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_pairs_complete" />
       <item itemvalue="Python tests.Python tests in Unit_tests.py" />
-      <item itemvalue="Python tests.Python tests for Unit tests.MyTestCase" />
-      <item itemvalue="Python tests.Unit tests" />
-      <item itemvalue="Python tests.Python tests in Unit tests.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in Unit_tests.py" />
-        <item itemvalue="Python tests.Python tests in Unit tests.py" />
-        <item itemvalue="Python tests.Python tests for Unit tests.MyTestCase" />
+        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS4" />
+        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS" />
         <item itemvalue="Python.Backend" />
-        <item itemvalue="Python tests.Unit tests" />
+        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_pairs_complete" />
       </list>
     </recent_temporary>
   </component>
