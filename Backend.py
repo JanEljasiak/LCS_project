@@ -1,66 +1,32 @@
-# W tym pliku znajduje się nasza implementacja algorytmu FLCS wraz z potrzebnymi funkcjami
+def longest_common_subsequences(seq1, seq2):
+  # Create a 2D list to store the lengths of the longest common subsequences at each index
+  lengths = [[0 for j in range(len(seq2)+1)] for i in range(len(seq1)+1)]
 
-def validate(seq):
-    for letter in seq:
-        if letter not in ["A", "C", "G", "T"]:
-            raise ValueError("Sekwencje muszą być ciągiem liter należących do ustalonego alfabetu.")
-    if not seq:
-        raise ValueError("Żadna z podanych sekwencji nie może być pusta.")
+  # Loop through the sequences and update the lengths of the longest common subsequences at each index
+  for i, x in enumerate(seq1):
+    for j, y in enumerate(seq2):
+      if x == y:
+        lengths[i+1][j+1] = lengths[i][j] + 1
+      else:
+        lengths[i+1][j+1] = max(lengths[i+1][j], lengths[i][j+1])
 
-def build_successor_tables(seqA, seqB):
-    seqAWithSpace, seqBWithSpace = " " + seqA, " " + seqB
-    colDimA, colDimB = len(seqAWithSpace), len(seqBWithSpace)
-    distinctLetters = "".join(dict.fromkeys(seqA + seqB))
-    rowDim = len(distinctLetters)
-    TseqA = [[-1 for col in range(colDimA)] for row in range(rowDim)]
-    TseqB = [[-1 for col in range(colDimB)] for row in range(rowDim)]
-    for i in range(rowDim):
-        for j in range(colDimA):
-            TseqA[i][j] = seqAWithSpace.find(distinctLetters[i], j+1)
-        for j in range(colDimB):
-            TseqB[i][j] = seqBWithSpace.find(distinctLetters[i], j+1)
-    return TseqA, TseqB, rowDim
+  # Use the lengths list to find all longest common subsequences
+  result = set()
+  x, y = len(seq1), len(seq2)
+  while x != 0 and y != 0:
+    if lengths[x][y] == lengths[x-1][y]:
+      x -= 1
+    elif lengths[x][y] == lengths[x][y-1]:
+      y -= 1
+    else:
+      result.add(seq1[x-1])
+      x -= 1
+      y -= 1
 
-def pairs(matricesWithRowDim):
-    TseqA, TseqB, rowDim = matricesWithRowDim
-    pairsTable = list()
-    for i in range(rowDim):
-        if TseqA[i][0] != -1 and TseqB[i][0] != - 1:
-            pairsTable.append([i, TseqA[i][0], TseqB[i][0], 0, -1, 1])
-                                # (k,i,j,level,pre,active)
-    return pairsTable
+  # Return the set of longest common subsequences
+  return result
 
-def pairs_complete(matricesWithRowDim, pairsTable):
-    TseqA, TseqB, rowDim = matricesWithRowDim
-    while any(item[5] == 1 for item in pairsTable):
-        for identicalPair in filter(lambda x: x[5] == 1, pairsTable):
-            maximalRow = max(x[0] for x in pairsTable) + 1
-            for i in range(rowDim):
-                el1 = TseqA[i][identicalPair[1]]
-                el2 = TseqB[i][identicalPair[2]]
-                if el1 != -1 and el2 != -1:
-                    pairsTable.append([maximalRow + i, el1, el2, identicalPair[3] + 1, identicalPair[0], 1])
-            pairsTable[pairsTable.index(identicalPair)][5] = 0
-    return pairsTable
 
-def find_list_of_LCS(pairsTable, seqA):
-    seqAWithSpace = " " + seqA
-    maximalLevel = max(x[3] for x in pairsTable)
-    identicalPairsWithMaximalLevel = list(filter(lambda x: x[3] == maximalLevel, pairsTable))
-    numberOfLCS = len(identicalPairsWithMaximalLevel)
-    listOfLCS = [None] * numberOfLCS
-    for i, identicalPair in enumerate(identicalPairsWithMaximalLevel):
-        tempPair = identicalPair
-        LCS = seqAWithSpace[tempPair[1]]
-        for j in range(maximalLevel):
-            tempPair = list(filter(lambda x: x[0] == tempPair[4], pairsTable))[0]
-            LCS = seqAWithSpace[tempPair[1]] + LCS
-        listOfLCS[i] = LCS
-    return listOfLCS
 
-def LCS(seqA, seqB):
-    validate(seqA)
-    validate(seqB)
-    matricesWithRowDim = build_successor_tables(seqA, seqB)
-    pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
-    return find_list_of_LCS(pairsTable, seqA)
+list = longest_common_subsequences("ABCBDAB", "BDCABA")
+print(list)
