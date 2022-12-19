@@ -63,4 +63,6 @@ def LCS(seqA, seqB):
     validate(seqB)
     matricesWithRowDim = build_successor_tables(seqA, seqB)
     pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
+    if not pairsTable:
+        raise ValueError("Podane sekwencje nie mają żadnego wspólnego podciągu.")
     return find_list_of_LCS(pairsTable, seqA)
