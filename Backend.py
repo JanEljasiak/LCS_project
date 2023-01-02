@@ -66,3 +66,4 @@ def LCS(seqA, seqB):
     if not pairsTable:
         raise ValueError("Podane sekwencje nie mają żadnego wspólnego podciągu.")
     return find_list_of_LCS(pairsTable, seqA)
+
