@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="Change file's name">
-      <change afterPath="$PROJECT_DIR$/Unit_tests.py" afterDir="false" />
+    <list default="true" id="a488a6ef-018e-431f-93ef-a16d7f1778f3" name="Default Changelist" comment="Add Unit tests for LCS function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Unit_tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/karol/PycharmProjects/LCS_project&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests in Unit_tests.py">
+  <component name="RunManager" selected="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS3">
     <configuration name="Backend" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Unit_tests.MyTestCase.test_LCS" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Unit_tests.MyTestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,11 +120,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_LCS&quot;" />
+      <option name="_new_target" value="&quot;Unit_tests.MyTestCase&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Unit_tests.MyTestCase.test_LCS4" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Unit_tests.MyTestCase.test_LCS3" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,11 +134,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_LCS4&quot;" />
+      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_LCS3&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Unit_tests.MyTestCase.test_pairs_complete" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Unit_tests.MyTestCase.test_pairs_complete2" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="LCS_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,7 +148,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_pairs_complete&quot;" />
+      <option name="_new_target" value="&quot;Unit_tests.MyTestCase.test_pairs_complete2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -168,18 +169,18 @@
     <list>
       <item itemvalue="Python.GUI" />
       <item itemvalue="Python.Backend" />
-      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS" />
-      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS4" />
-      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_pairs_complete" />
+      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase" />
+      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS3" />
+      <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_pairs_complete2" />
       <item itemvalue="Python tests.Python tests in Unit_tests.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in Unit_tests.py" />
-        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS4" />
-        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS" />
+        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_LCS3" />
+        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_pairs_complete2" />
+        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase" />
         <item itemvalue="Python.Backend" />
-        <item itemvalue="Python tests.Python tests for Unit_tests.MyTestCase.test_pairs_complete" />
+        <item itemvalue="Python tests.Python tests in Unit_tests.py" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670237278470</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add Unit tests for LCS function">
+      <created>1670865632782</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670865632782</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -274,6 +282,7 @@
     <MESSAGE value="Add pairs_complete function" />
     <MESSAGE value="Add Unit tests for pairs function" />
     <MESSAGE value="Add Unit tests for pair_complete function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Unit tests for pair_complete function" />
+    <MESSAGE value="Add Unit tests for LCS function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Unit tests for LCS function" />
   </component>
 </project>
