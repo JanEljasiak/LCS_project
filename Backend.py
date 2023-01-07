@@ -1,9 +1,10 @@
 # W tym pliku znajduje się nasza implementacja algorytmu FLCS wraz z potrzebnymi funkcjami
 
-def validate(seq):
+def validateAlphabet(seq):
     for letter in seq:
         if letter not in ["A", "C", "G", "T"]:
             raise ValueError("Sekwencje muszą być ciągiem liter należących do ustalonego alfabetu.")
+def validateEmptySeq(seq):
     if not seq:
         raise ValueError("Żadna z podanych sekwencji nie może być pusta.")
 
@@ -59,10 +60,19 @@ def find_list_of_LCS(pairsTable, seqA):
     return listOfLCS
 
 def LCS(seqA, seqB):
-    validate(seqA)
-    validate(seqB)
-    matricesWithRowDim = build_successor_tables(seqA, seqB)
-    pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
-    if not pairsTable:
-        raise ValueError("Podane sekwencje nie mają żadnego wspólnego podciągu.")
-    return find_list_of_LCS(pairsTable, seqA)
+    try:
+        validateAlphabet(seqA)
+        validateAlphabet(seqB)
+        try:
+            validateEmptySeq(seqA)
+            validateEmptySeq(seqB)
+            try:
+                matricesWithRowDim = build_successor_tables(seqA, seqB)
+                pairsTable = pairs_complete(matricesWithRowDim, pairs(matricesWithRowDim))
+                return find_list_of_LCS(pairsTable, seqA)
+            except ValueError:
+                print("Podane sekwencje nie mają żadnego wspólnego podciągu.")
+        except ValueError:
+            print("Żadna z podanych sekwencji nie może być pusta.")
+    except ValueError:
+        print("Sekwencje muszą być ciągiem liter należących do ustalo
