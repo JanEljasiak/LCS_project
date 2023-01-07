@@ -55,13 +55,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(result,expected)
 
     def test_pairs_complete2(self):
-     #   #given
+        #given
         MatricesWithRawDim=([[1,4,4,4,-1],[2,2,-1,-1,-1],[3,3,3,-1,-1]],[[1,3,3,4,-1,-1],[2,2,5,5,5,-1],[-1,-1,-1,-1,-1,-1]],3)
         pairsTable =[[0,1,1,0,-1,1],[1,2,2,0,-1,1]]
         expected=[[0,1,1,0,-1,0],[1,2,2,0,-1,0],[2,4,3,1,0,0],[3,2,2,1,0,0],[4,4,3,1,1,0],[5,4,3,2,3,0]]
-        # when
+        #when
         result = Backend.pairs_complete(MatricesWithRawDim, pairsTable)
-        # then
+        #then
         self.assertEqual(result, expected)
 
     def test_LCS(self):
@@ -84,16 +84,18 @@ class MyTestCase(unittest.TestCase):
         #then
         self.assertEqual(result,expected)
 
-    #def test_LCS3(self): (nie dziala!)
+    def test_LCS3(self): #(nie dziala!)
         #given
-     #   seqA="A"
-      #  seqB="G"
-      #  expected=['']
+        seqA="A"
+        seqB="G"
+        expected=None
         #when
-      #  result=Backend.LCS(seqA,seqB)
+        result=Backend.LCS(seqA,seqB)
         #then
-      #  self.assertEqual(result,expected)
-    def test_LCS4(self):
+        self.assertEqual(result,expected)
+
+
+    def test_LCS4(self): #Czy ta kolejność jest ok?
         # given
         seqA = "TAGCCAT"
         seqB = "AGTGCAC"
@@ -103,6 +105,38 @@ class MyTestCase(unittest.TestCase):
         # then
         self.assertEqual(result, expected)
 
+        def test_LCS5(self):
+            # given
+            seqA = ""
+            seqB = "GAAA"
+            expected = None
+            # when
+            result = Backend.LCS(seqA, seqB)
+            # then
+            self.assertEqual(result, expected)
+
+        def test_LCS6(self):
+            # given
+            seqA = "FGJ"
+            seqB = "GAAA"
+            expected = None
+            # when
+            result = Backend.LCS(seqA, seqB)
+            # then
+            self.assertEqual(result, expected)
+        def test_validateAlphabet(self):
+            # given
+            seqA = "FGJ"
+            # then
+            with self.assertRaises(ValueError):
+                Backend.validateAlphabet(seqA)
+
+        def test_validateEmptySeq(self):
+            # given
+            seqA = ""
+            # then
+            with self.assertRaises(ValueError):
+                Backend.validateEmptySeq(seqA)
 
 if __name__ == '__main__':
     unittest.main()
