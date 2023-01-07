@@ -84,15 +84,17 @@ class MyTestCase(unittest.TestCase):
         #then
         self.assertEqual(result,expected)
 
-    #def test_LCS3(self): #(nie dziala!)
+    def test_LCS3(self): #(nie dziala!)
         #given
-     #   seqA="A"
-      #  seqB="G"
-       # expected=['']
+        seqA="A"
+        seqB="G"
+        expected=None
         #when
-      #  result=Backend.LCS(seqA,seqB)
+        result=Backend.LCS(seqA,seqB)
         #then
-      #  self.assertEqual(result,expected)
+        self.assertEqual(result,expected)
+
+
     def test_LCS4(self): #Czy ta kolejność jest ok?
         # given
         seqA = "TAGCCAT"
@@ -103,6 +105,38 @@ class MyTestCase(unittest.TestCase):
         # then
         self.assertEqual(result, expected)
 
+        def test_LCS5(self):
+            # given
+            seqA = ""
+            seqB = "GAAA"
+            expected = None
+            # when
+            result = Backend.LCS(seqA, seqB)
+            # then
+            self.assertEqual(result, expected)
+
+        def test_LCS6(self):
+            # given
+            seqA = "FGJ"
+            seqB = "GAAA"
+            expected = None
+            # when
+            result = Backend.LCS(seqA, seqB)
+            # then
+            self.assertEqual(result, expected)
+        def test_validateAlphabet(self):
+            # given
+            seqA = "FGJ"
+            # then
+            with self.assertRaises(ValueError):
+                Backend.validateAlphabet(seqA)
+
+        def test_validateEmptySeq(self):
+            # given
+            seqA = ""
+            # then
+            with self.assertRaises(ValueError):
+                Backend.validateEmptySeq(seqA)
 
 if __name__ == '__main__':
     unittest.main()
