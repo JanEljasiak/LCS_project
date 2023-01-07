@@ -22,7 +22,7 @@ def build_successor_tables(seqA, seqB):
             TseqB[i][j] = seqBWithSpace.find(distinctLetters[i], j+1)
     return TseqA, TseqB, rowDim
 
-print(build_successor_tables("AGCA","AGAAG"))
+
 def pairs(matricesWithRowDim):
     TseqA, TseqB, rowDim = matricesWithRowDim
     pairsTable = list()
@@ -76,4 +76,5 @@ def LCS(seqA, seqB):
         except ValueError:
             print("Żadna z podanych sekwencji nie może być pusta.")
     except ValueError:
-        print("Sekwencje muszą być ciągiem liter należących do ustalo
+        print("Sekwencje muszą być ciągiem liter należących do ustalonego alfabetu.")
+
