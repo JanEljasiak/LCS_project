@@ -86,7 +86,3 @@ def LCS(seqA, seqB):
     if not pairsTable:
         raise ValueError("Podane sekwencje nie mają żadnego wspólnego podciągu.")
     return find_list_of_LCS(pairsTable, seqA)
-
-MatricesWithRawDim=([[1,4,4,4,-1],[2,2,-1,-1,-1],[3,3,3,-1,-1]],[[1,3,3,4,-1,-1],[2,2,5,5,5,-1],[-1,-1,-1,-1,-1,-1]],3)
-pairsTable =[[0,1,1,0,-1,1],[1,2,2,0,-1,1]]
-print(pairs_complete(MatricesWithRawDim, pairsTable))
