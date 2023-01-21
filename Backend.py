@@ -86,3 +86,26 @@ def LCS(seqA, seqB):
     if not pairsTable:
         raise ValueError("Podane sekwencje nie mają żadnego wspólnego podciągu.")
     return find_list_of_LCS(pairsTable, seqA)
+
+def find_coordinates(seqA, seqB, LCS):
+    coordinates = len(LCS)*[None]
+    lenLCS = 0
+    if LCS:
+        lenLCS = len(LCS[0])
+    for i, result in enumerate(LCS):
+        seqATemp, seqBTemp = seqA, seqB
+        seqACord = []
+        seqBCord = []
+        nA = 0
+        nB = 0
+        for letter in result:
+            cordALetter = seqATemp.find(letter)
+            cordBLetter = seqBTemp.find(letter)
+            seqACord.append(cordALetter + nA)
+            seqBCord.append(cordBLetter + nB)
+            seqATemp = seqATemp[cordALetter+1:]
+            seqBTemp = seqBTemp[cordBLetter+1:]
+            nA += cordALetter+1
+            nB += cordBLetter+1
+        coordinates[i] = [seqACord, seqBCord]
+    return coordinates
